@@ -1,4 +1,4 @@
 export * from './helpers';
 export * from './types';
-import RootNavigator from './RootNavigator';
+import RootNavigator from './navigators';
 export default RootNavigator;

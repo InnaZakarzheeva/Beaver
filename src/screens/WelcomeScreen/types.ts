@@ -4,9 +4,7 @@ import {connector} from './index';
 
 export interface StateProps {}
 
-export interface DispatchProps {
-  hideSplashScreen: () => void;
-}
+export interface DispatchProps {}
 
 export type Props = ConnectedProps<typeof connector>;
 

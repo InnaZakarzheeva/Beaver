@@ -7,9 +7,9 @@ import Logo from '../../assets/img/logo.png';
 
 const SplashScreen = (props: Props) => {
   useEffect(() => {
-    // setTimeout(() => {
-    //   props.hideSplash();
-    // }, 1000);
+    setTimeout(() => {
+      props.hideSplashScreen();
+    }, 1500);
   }, []);
 
   return (
