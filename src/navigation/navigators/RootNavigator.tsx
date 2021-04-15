@@ -7,7 +7,6 @@ import {Props} from './index';
 const RootStack = createStackNavigator<RootStackParamList>();
 
 const RootNavigator = (props: Props) => {
-  console.log(props);
   return (
     <RootStack.Navigator headerMode="none" initialRouteName="SplashScreen">
       {props.splashShown ? (
