@@ -57,4 +57,21 @@ const PlusSvg = (props: SvgProps) => {
   );
 };
 
-export {MoonSvg, ExitSvg, PlusSvg};
+const WarningSvg = (props: SvgProps) => {
+  return (
+    <Svg
+      width={props.size || 25}
+      height={props.size || 25}
+      viewBox="0 0 20 20"
+      fill="none">
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M19.1666 17.9166L9.99998 2.08331L0.833313 17.9166H19.1666ZM10.8333 15.4166H9.16665V13.75H10.8333V15.4166ZM9.16665 12.0833H10.8333V8.74998H9.16665V12.0833Z"
+        fill={Colors.yellow}
+      />
+    </Svg>
+  );
+};
+
+export {MoonSvg, ExitSvg, PlusSvg, WarningSvg};

@@ -6,4 +6,7 @@ export default {
   shareTo: 'SHARE TO SOCIAL MEDIA',
   continue: 'CONTINUE',
   chats: 'CHATS',
+  exit: 'EXIT',
+  cancel: 'CANCEL',
+  deleteData: 'Exit from app\nalso will delete its data',
 };
