@@ -3,9 +3,9 @@ import {ConnectedProps} from 'react-redux';
 import {RootStackParamList} from '../../navigation';
 import {connector} from './index';
 
-type WelcomeScreenNavigationProp = StackNavigationProp<
+type ShareScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
-  'WelcomeScreen'
+  'ShareUserScreen'
 >;
 
 export interface StateProps {}
@@ -14,6 +14,6 @@ export interface DispatchProps {}
 
 export type PropsFromRedux = ConnectedProps<typeof connector>;
 interface Props extends PropsFromRedux {
-  navigation: WelcomeScreenNavigationProp;
+  navigation: ShareScreenNavigationProp;
 }
 export default Props;

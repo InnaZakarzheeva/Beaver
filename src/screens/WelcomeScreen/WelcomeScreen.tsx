@@ -4,8 +4,9 @@ import {styles} from './styles';
 import strings from '../../assets/strings';
 import {Neomorph} from 'react-native-neomorph-shadows';
 import {Button} from '../../components';
+import Props from './types';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = (props: Props) => {
   return (
     <View style={styles.container}>
       <View style={styles.bubblesWrapper}>
@@ -21,6 +22,7 @@ const WelcomeScreen = () => {
         style={styles.button}
         titleStyle={styles.text}
         wrapperStyle={styles.buttonWrapper}
+        onPress={() => props.navigation.navigate('ShareUserScreen')}
       />
     </View>
   );

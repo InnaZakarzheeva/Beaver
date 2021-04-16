@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Pressable,
   ViewStyle,
@@ -25,13 +25,14 @@ interface Props {
 }
 
 const Button = (props: Props) => {
+  const [isClicked, setClicked] = useState(false);
   let height: number = props.height || 50;
   let width: number =
     props.width || Dimensions.get('screen').width - Margins.marginsDefault;
 
   const neomorphStyle = () => {
     return {
-      shadowRadius: 5,
+      shadowRadius: isClicked ? 1 : 5,
       borderRadius: 25,
       backgroundColor: Colors.primary,
       height,
@@ -39,9 +40,17 @@ const Button = (props: Props) => {
     };
   };
 
+  const onPress = () => {
+    setClicked(true);
+    setTimeout(() => {
+      setClicked(false);
+      props.onPress?.();
+    }, 300);
+  };
+
   return (
     <Pressable
-      onPress={props.onPress}
+      onPress={onPress}
       disabled={props.disabled}
       style={props.wrapperStyle}>
       <Neomorph style={neomorphStyle()}>

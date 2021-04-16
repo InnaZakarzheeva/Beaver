@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {RootStackParamList} from '../types';
-import {SplashScreen, WelcomeScreen} from '../../screens';
+import {ShareScreen, SplashScreen, WelcomeScreen} from '../../screens';
 import {Props} from './index';
 
 const RootStack = createStackNavigator<RootStackParamList>();
@@ -12,7 +12,10 @@ const RootNavigator = (props: Props) => {
       {props.splashShown ? (
         <RootStack.Screen name="SplashScreen" component={SplashScreen} />
       ) : (
-        <RootStack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+        <>
+          <RootStack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+          <RootStack.Screen name="ShareUserScreen" component={ShareScreen} />
+        </>
       )}
     </RootStack.Navigator>
   );
