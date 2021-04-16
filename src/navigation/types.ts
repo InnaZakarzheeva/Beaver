@@ -2,8 +2,7 @@ type RootStackParamList = {
   SplashScreen: undefined;
   WelcomeScreen: undefined;
   ShareUserScreen: undefined;
-  QRCodeScreen: undefined;
-  AllChatsScreen: undefined;
+  ListOfChats: undefined;
   ChatScreen: undefined;
 };
 

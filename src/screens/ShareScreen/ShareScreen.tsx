@@ -4,10 +4,14 @@ import {styles} from './styles';
 import strings from '../../assets/strings';
 import {Neomorph} from 'react-native-neomorph-shadows';
 import {Button} from '../../components';
+import Props from './types';
 
-const ShareScreen = () => {
+const ShareScreen = (props: Props) => {
   const shareUserId = () => {
     return;
+  };
+  const navigateToMain = () => {
+    props.navigation.navigate('ListOfChats');
   };
   return (
     <View style={styles.container}>
@@ -27,6 +31,7 @@ const ShareScreen = () => {
           title={strings.continue}
           style={styles.button}
           titleStyle={styles.buttonTitle}
+          onPress={navigateToMain}
         />
       </View>
     </View>

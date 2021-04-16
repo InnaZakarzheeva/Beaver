@@ -5,4 +5,5 @@ export default {
   showQR: 'Show QR-code your friend\nand start chatting',
   shareTo: 'SHARE TO SOCIAL MEDIA',
   continue: 'CONTINUE',
+  chats: 'CHATS',
 };

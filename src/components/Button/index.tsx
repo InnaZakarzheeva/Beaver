@@ -13,7 +13,7 @@ import {Colors} from '../../assets/colors';
 import Margins from '../../assets/margins';
 
 interface Props {
-  title: string;
+  title?: string;
   onPress?: () => void;
   disabled?: boolean;
   height?: number;
@@ -22,6 +22,7 @@ interface Props {
   wrapperStyle?: StyleProp<ViewStyle>;
   titleStyle?: StyleProp<TextStyle>;
   icon?: Element;
+  borderRadius?: number;
 }
 
 const Button = (props: Props) => {
@@ -33,7 +34,7 @@ const Button = (props: Props) => {
   const neomorphStyle = () => {
     return {
       shadowRadius: isClicked ? 1 : 5,
-      borderRadius: 25,
+      borderRadius: props.borderRadius || 25,
       backgroundColor: Colors.primary,
       height,
       width,
@@ -55,8 +56,8 @@ const Button = (props: Props) => {
       style={props.wrapperStyle}>
       <Neomorph style={neomorphStyle()}>
         <View style={props.style}>
-          {/* {props.icon} */}
-          <Text style={props.titleStyle}>{props.title}</Text>
+          {props.icon}
+          {props.title && <Text style={props.titleStyle}>{props.title}</Text>}
         </View>
       </Neomorph>
     </Pressable>
