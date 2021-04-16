@@ -1,18 +1,63 @@
 import React, {useState} from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, FlatList, TouchableOpacity} from 'react-native';
 import {styles} from './styles';
 import strings from '../../assets/strings';
 import {Neomorph} from 'react-native-neomorph-shadows';
-import {Button, ExitModal} from '../../components';
+import {
+  Button,
+  ExitModal,
+  ConversationItem,
+  OptionsModal,
+} from '../../components';
 import Margins from '../../assets/margins';
 import {ExitSvg, MoonSvg, PlusSvg} from '../../assets/icons';
+import Props from './types';
 
-const ListOfChatsScreen = () => {
+const chats = [
+  {
+    id: '5678',
+    name: 'Conversation 1',
+  },
+  {
+    id: '2222',
+    name: '',
+  },
+];
+
+const ListOfChatsScreen = (props: Props) => {
   const [isVisibleExit, setVisibleExit] = useState(false);
+  const [isVisibleOptions, setVisibleOptions] = useState(false);
+  const [currentChat, setCurrentChat] = useState<string | null>(null);
 
   const onExit = () => {
     setVisibleExit(false);
   };
+
+  const navigateToChat = (id: string) => {
+    props.navigation.navigate('ChatScreen', {id});
+  };
+
+  const openOptions = (id: string) => {
+    setCurrentChat(id);
+    setVisibleOptions(true);
+  };
+
+  const onDeleteChat = () => {
+    setVisibleOptions(false);
+    setCurrentChat(null);
+    if (currentChat) {
+      // delete...
+    }
+  };
+
+  const onRenameChat = () => {
+    setVisibleOptions(false);
+    setCurrentChat(null);
+    if (currentChat) {
+      //rename...
+    }
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -41,12 +86,25 @@ const ListOfChatsScreen = () => {
         />
       </View>
 
+      <FlatList
+        data={chats}
+        renderItem={({item}) => (
+          <TouchableOpacity
+            onPress={navigateToChat.bind(this, item.id)}
+            onLongPress={openOptions.bind(this, item.id)}>
+            <ConversationItem chat={item} />
+          </TouchableOpacity>
+        )}
+        keyExtractor={item => item.id.toString()}
+        contentContainerStyle={styles.conversationsList}
+      />
+
       <Button
         wrapperStyle={styles.addBtnWrapper}
         style={styles.addBtn}
         icon={<PlusSvg />}
-        width={60}
-        height={60}
+        width={Margins.containerSize}
+        height={Margins.containerSize}
         borderRadius={50}
       />
 
@@ -54,6 +112,13 @@ const ListOfChatsScreen = () => {
         visible={isVisibleExit}
         onCancel={setVisibleExit.bind(this, false)}
         onPress={onExit}
+      />
+
+      <OptionsModal
+        visible={isVisibleOptions}
+        onCancel={setVisibleOptions.bind(this, false)}
+        onPressDelete={onDeleteChat}
+        onPressRename={onRenameChat}
       />
     </View>
   );

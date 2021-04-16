@@ -9,4 +9,8 @@ export default {
   exit: 'EXIT',
   cancel: 'CANCEL',
   deleteData: 'Exit from app\nalso will delete its data',
+  renameChat: 'RENAME CHAT',
+  deleteChat: 'DELETE CHAT',
+  unnamedChat: 'Set name of chat with long press.',
+  whatToDo: 'What do you want to do?',
 };

@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.primary,
+    paddingTop: 55 + Margins.buttonSize + Margins.marginsDefault,
   },
   header: {
     position: 'absolute',
@@ -50,9 +51,13 @@ export const styles = StyleSheet.create({
     right: 30,
   },
   addBtn: {
-    width: 60,
-    height: 60,
+    width: Margins.containerSize,
+    height: Margins.containerSize,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  conversationsList: {
+    alignSelf: 'center',
+    paddingHorizontal: Margins.marginsSmall,
   },
 });

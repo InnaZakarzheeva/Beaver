@@ -3,7 +3,7 @@ type RootStackParamList = {
   WelcomeScreen: undefined;
   ShareUserScreen: undefined;
   ListOfChats: undefined;
-  ChatScreen: undefined;
+  ChatScreen: {id: string} | undefined;
 };
 
 export type {RootStackParamList};

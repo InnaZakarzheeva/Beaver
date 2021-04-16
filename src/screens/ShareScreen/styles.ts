@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     borderBottomLeftRadius: 0,
     backgroundColor: '#303135',
     width: width - Margins.marginsDefault,
-    height: 60,
+    height: Margins.containerSize,
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute',
