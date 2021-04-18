@@ -41,17 +41,11 @@ const Button = (props: Props) => {
     };
   };
 
-  const onPress = () => {
-    setClicked(true);
-    setTimeout(() => {
-      setClicked(false);
-      props.onPress?.();
-    }, 300);
-  };
-
   return (
     <Pressable
-      onPress={onPress}
+      onPress={props.onPress}
+      onPressIn={setClicked.bind(this, true)}
+      onPressOut={setClicked.bind(this, false)}
       disabled={props.disabled}
       style={props.wrapperStyle}>
       <Neomorph style={neomorphStyle()}>
