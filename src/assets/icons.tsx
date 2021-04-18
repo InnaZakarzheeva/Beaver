@@ -74,4 +74,38 @@ const WarningSvg = (props: SvgProps) => {
   );
 };
 
-export {MoonSvg, ExitSvg, PlusSvg, WarningSvg};
+const SendSvg = (props: SvgProps) => {
+  return (
+    <Svg
+      width={props.size || 30}
+      height={props.size || 30}
+      viewBox="0 0 30 30"
+      fill="none">
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M1.875 12.5L1.8875 3.75L28.125 15L1.8875 26.25L1.875 17.5L20.625 15L1.875 12.5ZM4.3875 7.5375L13.775 11.5625L4.375 10.3125L4.3875 7.5375ZM13.7625 18.4375L4.375 22.4625V19.6875L13.7625 18.4375Z"
+        fill={Colors.accent}
+      />
+    </Svg>
+  );
+};
+
+const BackArrowSvg = (props: SvgProps) => {
+  return (
+    <Svg
+      width={props.size || 24}
+      height={props.size || 24}
+      viewBox="0 0 24 24"
+      fill="none">
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M9.41424 12L16.7071 19.2929L15.2929 20.7071L6.58582 12L15.2929 3.29291L16.7071 4.70712L9.41424 12Z"
+        fill={Colors.accent}
+      />
+    </Svg>
+  );
+};
+
+export {MoonSvg, ExitSvg, PlusSvg, WarningSvg, SendSvg, BackArrowSvg};
