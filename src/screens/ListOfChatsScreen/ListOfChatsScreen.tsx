@@ -58,6 +58,10 @@ const ListOfChatsScreen = (props: Props) => {
     }
   };
 
+  const navigateToShare = () => {
+    props.navigation.navigate('ShareUserScreen');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -106,6 +110,7 @@ const ListOfChatsScreen = (props: Props) => {
         width={Margins.containerSize}
         height={Margins.containerSize}
         borderRadius={50}
+        onPress={navigateToShare}
       />
 
       <ExitModal

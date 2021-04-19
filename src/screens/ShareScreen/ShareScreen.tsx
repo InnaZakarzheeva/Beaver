@@ -3,6 +3,7 @@ import {Text, View} from 'react-native';
 import {styles} from './styles';
 import strings from '../../assets/strings';
 import {Neomorph} from 'react-native-neomorph-shadows';
+import QRCode from 'react-native-qrcode-svg';
 import {Button} from '../../components';
 import Props from './types';
 
@@ -19,6 +20,10 @@ const ShareScreen = (props: Props) => {
         <Text style={styles.text}>{strings.showQR}</Text>
       </Neomorph>
       {/* QrCode */}
+      {/* <View style={{ marginTop: 250 }}>
+        <QRCode size={250} value={'test-test'} />
+      </View> */}
+
       <View style={styles.btnContainer}>
         <Button
           title={strings.shareTo}
