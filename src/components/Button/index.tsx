@@ -7,6 +7,7 @@ import {
   Text,
   Dimensions,
   View,
+  Platform,
 } from 'react-native';
 import {Neomorph} from 'react-native-neomorph-shadows';
 import {Colors} from '../../assets/colors';
@@ -33,7 +34,7 @@ const Button = (props: Props) => {
 
   const neomorphStyle = () => {
     return {
-      shadowRadius: isClicked ? 1 : 5,
+      shadowRadius: isClicked && Platform.OS === 'ios' ? 1 : 5,
       borderRadius: props.borderRadius || 25,
       backgroundColor: Colors.primary,
       height,
