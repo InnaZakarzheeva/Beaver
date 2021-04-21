@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Verbina.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>8A59701964669FB45B23097199BDC61E2A19120C</string>
+				<key>dateExpires</key>
+				<string>17.03.2022</string>
+				<key>type</key>
+				<string>Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>293XCCH565.com.verbina.mobile</string>
+				<key>aps-environment</key>
+				<string>production</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>293XCCH565</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>Verbina.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>4936753b-adc7-4c19-8f8d-5e1785406ead</string>
+				<key>name</key>
+				<string>Verbina PN (Ad Hoc)</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>293XCCH565</string>
+				<key>name</key>
+				<string>Story Cat Labs LLC</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
