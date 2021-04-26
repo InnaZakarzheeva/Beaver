@@ -47,4 +47,9 @@ export const styles = StyleSheet.create({
   separator: {
     height: Margins.separator,
   },
+  qrWrapper: {
+    flex: 0.9,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });

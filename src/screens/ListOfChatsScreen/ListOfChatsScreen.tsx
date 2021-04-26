@@ -10,7 +10,7 @@ import {
   OptionsModal,
 } from '../../components';
 import Margins from '../../assets/margins';
-import {ExitSvg, MoonSvg, PlusSvg} from '../../assets/icons';
+import {ExitSvg, PlusSvg, SettingsSvg} from '../../assets/icons';
 import Props from './types';
 
 const chats = [
@@ -73,11 +73,10 @@ const ListOfChatsScreen = (props: Props) => {
         <Button
           wrapperStyle={styles.iconBtn}
           style={styles.iconWrapper}
-          icon={<MoonSvg />}
+          icon={<SettingsSvg />}
           width={Margins.buttonSize}
           height={Margins.buttonSize}
           borderRadius={15}
-          disabled // change theme
         />
         <Button
           wrapperStyle={styles.iconBtn}
