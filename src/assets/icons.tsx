@@ -10,23 +10,6 @@ export interface SvgProps {
   style?: StyleProp<ViewStyle>;
 }
 
-const MoonSvg = (props: SvgProps) => {
-  return (
-    <Svg
-      width={props.size || 40}
-      height={props.size || 40}
-      viewBox="0 0 40 40"
-      fill="none">
-      <Path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M22.6918 6.79866C23.839 7.28312 24.9203 7.94133 25.9195 8.79233C31.1726 13.2662 31.805 21.1605 27.3312 26.4135C22.8573 31.6666 14.963 32.299 9.70995 27.8252C8.71073 26.9742 7.88876 26.0115 7.22784 24.956C12.1208 27.038 17.9904 25.814 21.6213 21.5507C25.2522 17.2873 25.5261 11.2978 22.6918 6.79866ZM25.4279 24.7926C27.9242 21.8615 28.4309 17.8928 27.0821 14.5604C26.8505 17.647 25.6562 20.6688 23.5246 23.1716C21.393 25.6745 18.5999 27.3347 15.5895 28.0547C19.0942 28.8557 22.9316 27.7237 25.4279 24.7926Z"
-        fill={Colors.accent}
-      />
-    </Svg>
-  );
-};
-
 const ExitSvg = (props: SvgProps) => {
   return (
     <Svg
@@ -108,30 +91,15 @@ const BackArrowSvg = (props: SvgProps) => {
   );
 };
 
-const SettingsSvg = (props: SvgProps) => {
+const QRSvg = (props: SvgProps) => {
   return (
-    <Svg
-      width={props.size || 24}
-      height={props.size || 24}
-      viewBox="0 0 24 24"
-      fill="none">
+    <Svg width={props.size || 24} height={props.size || 24} viewBox="0 0 24 24">
       <Path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M13.5758 9.90958L22.6559 18.9896C23.0559 19.3896 23.0559 20.0196 22.6559 20.3996L20.3558 22.6996C19.9658 23.0896 19.3358 23.0896 18.9458 22.6996L9.83582 13.5896C7.51587 14.4596 4.80591 13.9696 2.9458 12.1096C0.645874 9.81958 0.435913 6.22958 2.2959 3.68958L6.12585 7.51956L7.5459 6.10959L3.70581 2.25958C6.25586 0.399567 9.83582 0.609589 12.1359 2.90958C14.0259 4.80957 14.5059 7.56958 13.5758 9.90958ZM10.1959 11.1296L19.6559 20.5896L20.5359 19.6996L11.0859 10.2496C11.5459 9.65958 11.8459 8.99957 11.9659 8.28958C12.2159 6.89957 11.8059 5.40958 10.726 4.32956C9.77588 3.38956 8.52588 2.94955 7.28589 3.01956L10.3759 6.10956L6.13586 10.3496L3.0459 7.25958C2.97595 8.49957 3.41589 9.75958 4.36584 10.6996C5.40588 11.7396 6.83594 12.1496 8.19592 11.9496C8.90588 11.8496 9.58594 11.5796 10.1959 11.1296Z"
+        d="M19 2c1.654 0 3 1.346 3 3v14c0 1.654-1.346 3-3 3h-14c-1.654 0-3-1.346-3-3v-14c0-1.654 1.346-3 3-3h14zm0-2h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-8 8h-1v-2h1v1h2v1h-1v1h-1v-1zm2 12v-1h-1v1h1zm-1-15v-1h-2v1h1v1h1v-1zm8-1v6h-1v-1h-4v-5h5zm-1 4v-3h-3v3h3zm-14 2h-1v1h2v-1h-1zm0 3h1v1h1v-3h-1v1h-2v2h1v-1zm5 1v2h1v-2h-1zm4-10h-1v3h1v-3zm0 5v-1h-1v1h1zm3-2h1v-1h-1v1zm-10-1h-1v1h1v-1zm2-2v5h-5v-5h5zm-1 1h-3v3h3v-3zm9 5v1h-1v-1h-2v1h-1v-1h-3v-1h-1v1h-1v1h1v2h1v-1h1v2h1v-2h3v1h-2v1h2v1h1v-3h1v1h1v2h1v-1h1v-1h-1v-1h-1v-1h1v-1h-2zm-11 8h1v-1h-1v1zm-2-3h5v5h-5v-5zm1 4h3v-3h-3v3zm12-3v-1h-1v1h1zm0 1h-1v1h-1v-1h-1v-1h1v-1h-2v-1h-1v2h-1v1h-1v3h1v-1h1v-1h2v2h1v-1h1v1h2v-1h1v-1h-2v-1zm-9-3h1v-1h-1v1zm10 2v1h1v1h1v-3h-1v1h-1zm2 4v-1h-1v1h1zm0-8v-1h-1v1h1z"
         fill={Colors.accent}
-        fill-opacity="0.54"
       />
     </Svg>
   );
 };
 
-export {
-  MoonSvg,
-  ExitSvg,
-  PlusSvg,
-  WarningSvg,
-  SendSvg,
-  BackArrowSvg,
-  SettingsSvg,
-};
+export {ExitSvg, PlusSvg, WarningSvg, SendSvg, BackArrowSvg, QRSvg};

@@ -6,34 +6,36 @@ import {Neomorph} from 'react-native-neomorph-shadows';
 import QRCode from 'react-native-qrcode-svg';
 import {Button} from '../../components';
 import Props from './types';
-// import dynamicLinks from '@react-native-firebase/dynamic-links';
+import Share, {ShareOptions} from 'react-native-share';
 
 const ShareScreen = (props: Props) => {
+  const id = '1234'; // user id
+
   const shareUserId = async () => {
-    // const id = '1234';
-    // const link = await dynamicLinks().buildLink({
-    //   link: `https://beaverapp.com/invite?id=${id}`,
-    //   domainUriPrefix: 'https://beaverapp.page.link',
-    //   social: {
-    //     title: 'Invitation to Beaver App',
-    //     descriptionText: 'Follow the link to start chatting :)',
-    //   },
-    //   android: {
-    //     packageName: 'com.beaver',
-    //   },
-    // });
-    // return link;
+    const options: ShareOptions = {
+      title: 'Invitation to Beaver App',
+      message: `beaverapp://chat/${id}`,
+    };
+    Share.open(options)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        err && console.log(err);
+      });
   };
+
   const navigateToMain = () => {
     props.navigation.navigate('ListOfChats');
   };
+
   return (
     <View style={styles.container}>
       <Neomorph inner style={styles.bubble}>
         <Text style={styles.text}>{strings.showQR}</Text>
       </Neomorph>
       <View style={styles.qrWrapper}>
-        <QRCode size={250} value={'test-test'} />
+        <QRCode size={250} value={`beaverapp://chat/${id}`} />
       </View>
 
       <View style={styles.btnContainer}>

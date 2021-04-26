@@ -10,7 +10,7 @@ import {
   OptionsModal,
 } from '../../components';
 import Margins from '../../assets/margins';
-import {ExitSvg, PlusSvg, SettingsSvg} from '../../assets/icons';
+import {ExitSvg, PlusSvg, QRSvg} from '../../assets/icons';
 import Props from './types';
 
 const chats = [
@@ -59,7 +59,11 @@ const ListOfChatsScreen = (props: Props) => {
   };
 
   const navigateToShare = () => {
-    props.navigation.navigate('ShareUserScreen');
+    props.navigation.navigate('ScanQRScreen');
+  };
+
+  const navigateToQR = () => {
+    props.navigation.navigate('SettingsScreen');
   };
 
   return (
@@ -73,10 +77,11 @@ const ListOfChatsScreen = (props: Props) => {
         <Button
           wrapperStyle={styles.iconBtn}
           style={styles.iconWrapper}
-          icon={<SettingsSvg />}
+          icon={<QRSvg />}
           width={Margins.buttonSize}
           height={Margins.buttonSize}
           borderRadius={15}
+          onPress={navigateToQR}
         />
         <Button
           wrapperStyle={styles.iconBtn}

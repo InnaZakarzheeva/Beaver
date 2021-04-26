@@ -2,6 +2,7 @@
   package="com.beaver">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
       android:name=".MainApplication"
@@ -22,9 +23,7 @@
             <action android:name="android.intent.action.VIEW"/>
             <category android:name="android.intent.category.DEFAULT"/>
             <category android:name="android.intent.category.BROWSABLE"/>
-            <data
-                android:host="beaverapp.page.link"
-                android:scheme="https"/>
+            <data android:scheme="beaverapp" android:host="chat" />
         </intent-filter>
       </activity>
     </application>
