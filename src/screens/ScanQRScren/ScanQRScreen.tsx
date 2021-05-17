@@ -6,7 +6,6 @@ import Props from './types';
 import {BackArrowSvg} from '../../assets/icons';
 
 const SettingsScreen = (props: Props) => {
-  const id = '1234'; // user id
   const scanner = useRef(null);
 
   const goBack = () => {
@@ -14,12 +13,12 @@ const SettingsScreen = (props: Props) => {
   };
 
   const onSuccess = e => {
-    console.log('success');
-    console.log(e);
     Linking.openURL(e.data).catch(err =>
       console.error('An error occured', err),
     );
-    props.navigation.goBack();
+    props.navigation.navigate('ChatScreen', {
+      id: e.data,
+    });
   };
 
   return (

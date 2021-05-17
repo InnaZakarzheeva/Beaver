@@ -47,7 +47,7 @@ const ChatScreen = (props: Props) => {
   };
 
   const onSend = (message: Array<IMessage>) => {
-    setMessages(messages.concat(message));
+    setMessages([...message, ...messages]);
   };
 
   const goBack = () => {

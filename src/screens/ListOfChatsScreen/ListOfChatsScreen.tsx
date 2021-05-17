@@ -15,11 +15,7 @@ import Props from './types';
 
 const chats = [
   {
-    id: '5678',
-    name: 'Conversation 1',
-  },
-  {
-    id: '2222',
+    id: '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed',
     name: '',
   },
 ];
