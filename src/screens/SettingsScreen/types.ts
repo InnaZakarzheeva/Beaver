@@ -8,7 +8,9 @@ type SettingsScreenNavigationProp = StackNavigationProp<
   'SettingsScreen'
 >;
 
-export interface StateProps {}
+export interface StateProps {
+  userID: string;
+}
 
 export interface DispatchProps {}
 

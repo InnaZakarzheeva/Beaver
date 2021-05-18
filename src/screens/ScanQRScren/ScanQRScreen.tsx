@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {styles} from './styles';
 import {Dimensions, Linking, View, TouchableOpacity} from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
@@ -7,6 +7,14 @@ import {BackArrowSvg} from '../../assets/icons';
 
 const SettingsScreen = (props: Props) => {
   const scanner = useRef(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      props.navigation.navigate('ChatScreen', {
+        id: '1hiy7tvlkotvhs6v',
+      });
+    }, 2000);
+  }, []);
 
   const goBack = () => {
     props.navigation.goBack();

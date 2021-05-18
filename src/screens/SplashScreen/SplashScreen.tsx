@@ -4,11 +4,22 @@ import {styles} from './styles';
 import Props from './types';
 
 import Logo from '../../assets/img/logo.png';
+import {AuthRepository} from '../../services/repository';
 
 const SplashScreen = (props: Props) => {
   useEffect(() => {
     setTimeout(() => {
-      props.hideSplashScreen();
+      AuthRepository.getTokenFromLocalStorage()
+        .then(data => {
+          if (data) {
+            props.navigateToHome();
+          } else {
+            props.hideSplashScreen();
+          }
+        })
+        .catch(() => {
+          props.hideSplashScreen();
+        });
     }, 1500);
   }, []);
 

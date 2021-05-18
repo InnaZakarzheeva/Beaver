@@ -3,7 +3,9 @@ import {ReduxStore} from '../../state';
 import ShareScreen from './ShareScreen';
 import {DispatchProps, StateProps} from './types';
 
-const mapState = (state: ReduxStore): StateProps => ({});
+const mapState = (state: ReduxStore): StateProps => ({
+  userID: state.auth.userID,
+});
 
 const mapDispatch: DispatchProps = {};
 

@@ -9,12 +9,10 @@ import Props from './types';
 import Share, {ShareOptions} from 'react-native-share';
 
 const ShareScreen = (props: Props) => {
-  const id = '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'; // user id
-
   const shareUserId = async () => {
     const options: ShareOptions = {
       title: 'Invitation to Beaver App',
-      message: `beaverapp://chat/${id}`,
+      message: `beaverapp://chat/${props.userID}`,
     };
     Share.open(options)
       .then(res => {
@@ -35,7 +33,7 @@ const ShareScreen = (props: Props) => {
         <Text style={styles.text}>{strings.showQR}</Text>
       </Neomorph>
       <View style={styles.qrWrapper}>
-        <QRCode size={250} value={id} />
+        <QRCode size={250} value={props.userID} />
       </View>
 
       <View style={styles.btnContainer}>

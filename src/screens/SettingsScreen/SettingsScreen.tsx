@@ -8,8 +8,7 @@ import Props from './types';
 import {BackArrowSvg} from '../../assets/icons';
 
 const SettingsScreen = (props: Props) => {
-  const id = '1234'; // user id
-
+  console.log(props.userID);
   const goBack = () => {
     props.navigation.goBack();
   };
@@ -23,7 +22,7 @@ const SettingsScreen = (props: Props) => {
         <Text style={styles.text}>{strings.showQR}</Text>
       </Neomorph>
       <View style={styles.qrWrapper}>
-        <QRCode size={250} value={`beaverapp://chat/${id}`} />
+        <QRCode size={250} value={`beaverapp://chat/${props.userID}`} />
       </View>
     </View>
   );

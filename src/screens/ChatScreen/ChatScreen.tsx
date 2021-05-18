@@ -15,7 +15,16 @@ import {MessageBubble, InputToolBarComponent} from './components';
 import {BackArrowSvg} from '../../assets/icons';
 
 const ChatScreen = (props: Props) => {
-  const [messages, setMessages] = useState<Array<IMessage>>([]);
+  const [messages, setMessages] = useState<Array<IMessage>>([
+    {
+      _id: 1,
+      text: 'Привіт',
+      createdAt: new Date(),
+      user: {
+        _id: 2,
+      },
+    },
+  ]);
 
   const renderBubble = (bubbleProps: BubbleProps<IMessage>) => (
     <MessageBubble {...bubbleProps} />

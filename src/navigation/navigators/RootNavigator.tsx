@@ -14,11 +14,24 @@ import {Props} from './index';
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
+const registeredNavigator = () => {
+  return (
+    <>
+      <RootStack.Screen name="ListOfChats" component={ListOfChatsScreen} />
+      <RootStack.Screen name="ChatScreen" component={ChatScreen} />
+      <RootStack.Screen name="SettingsScreen" component={SettingsScreen} />
+      <RootStack.Screen name="ScanQRScreen" component={ScanQRScreen} />
+    </>
+  );
+};
+
 const RootNavigator = (props: Props) => {
   return (
     <RootStack.Navigator headerMode="none" initialRouteName="SplashScreen">
       {props.splashShown ? (
         <RootStack.Screen name="SplashScreen" component={SplashScreen} />
+      ) : props.isRegistered ? (
+        registeredNavigator()
       ) : (
         <>
           <RootStack.Screen name="WelcomeScreen" component={WelcomeScreen} />

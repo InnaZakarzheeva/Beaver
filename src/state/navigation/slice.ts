@@ -5,6 +5,7 @@ export const SLICE_NAME = 'NAVIGATION';
 
 const initialState: NavigationState = {
   splashShown: true,
+  isRegistered: false,
 };
 
 const navigationSlice = createSlice({
@@ -13,6 +14,10 @@ const navigationSlice = createSlice({
   reducers: {
     hideSplashAction: state => {
       state.splashShown = false;
+    },
+    navigateToHome: state => {
+      state.splashShown = false;
+      state.isRegistered = true;
     },
   },
 });

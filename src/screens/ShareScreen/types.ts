@@ -8,7 +8,9 @@ type ShareScreenNavigationProp = StackNavigationProp<
   'ShareUserScreen'
 >;
 
-export interface StateProps {}
+export interface StateProps {
+  userID: string;
+}
 
 export interface DispatchProps {}
 
