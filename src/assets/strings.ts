@@ -1,0 +1,16 @@
+export default {
+  welcomeText1: 'Ha*ks[%##ask?/',
+  welcomeText2: 'Hi! How are you?',
+  createProfile: 'CREATE PROFILE',
+  showQR: 'Show QR-code your friend\nand start chatting',
+  shareTo: 'SHARE TO SOCIAL MEDIA',
+  continue: 'CONTINUE',
+  chats: 'CHATS',
+  exit: 'EXIT',
+  cancel: 'CANCEL',
+  deleteData: 'Exit from app\nalso will delete its data',
+  renameChat: 'RENAME CHAT',
+  deleteChat: 'DELETE CHAT',
+  unnamedChat: 'Set name of chat with long press.',
+  whatToDo: 'What do you want to do?',
+};

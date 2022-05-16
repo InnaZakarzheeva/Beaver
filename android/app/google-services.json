@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "868401152965",
+    "project_id": "beaver-86faf",
+    "storage_bucket": "beaver-86faf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868401152965:android:0a192ae53f2fe4a66f41ac",
+        "android_client_info": {
+          "package_name": "com.beaver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868401152965-nhp0u0f93ianujheigqoopjghel54umj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZBPSASZkIvVPOBz3i2d93hy1coFRx5dE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868401152965-nhp0u0f93ianujheigqoopjghel54umj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "868401152965-0j8cqr82u1kr8ir9ccgj0e4kedclchi8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.beaver",
+                "app_store_id": "123456789"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
